@@ -87,10 +87,10 @@ def index():
 
 @app.route("/action", methods=["POST"])
 def action():
-    # data = request.get_json(silent=True)
-    # untrusted_data = data["untrustedData"]
-    # fid = untrusted_data["fid"]
-    url = f"https://api.pinata.cloud/v3/farcaster/casts?fid={3}"
+    data = request.get_json(silent=True)
+    untrusted_data = data["untrustedData"]
+    fid = untrusted_data["fid"]
+    url = f"https://api.pinata.cloud/v3/farcaster/casts?fid={fid}"
 
     token = PINATA_API_KEY
 
