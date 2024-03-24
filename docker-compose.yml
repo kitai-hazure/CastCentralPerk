@@ -1,0 +1,6 @@
+services:
+  cast_central_server:
+    build: .
+    env_file: settings.env
+    ports:
+      - "5000:5000"

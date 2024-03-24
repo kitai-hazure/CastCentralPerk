@@ -1,9 +1,8 @@
 # CastCentralPerk
 A farcaster frame that analyzes your casts and tells which "Friends" character do you cast like
 
-Please create a virtual environment and then install dependencies using
-`pip install -r requirements.txt`
+## Steps to setup
+Please make sure to add your OPENAI_API_KEY AND PINATA_API_KEY in `settings.env` and also setup Docker and Docker Compose on your system if not already.
 
-Please make sure to add your OPENAI_API_KEY AND PINATA_API_KEY in environ using this command on terminal
-`export OPENAI_API_KEY=""`
-`export PINATA_API_KEY=""`
+Run the following command to create the docker container and run the app locally
+`docker-compose up`.
