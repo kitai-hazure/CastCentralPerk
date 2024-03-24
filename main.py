@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__, template_folder="templates")
 
-app_url = f"https://d804-103-66-61-92.ngrok-free.app"
+app_url = f"https://0b50-2405-201-2003-b884-a0d5-2e07-f8a9-a77a.ngrok-free.app"
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 PINATA_API_KEY = os.environ.get("PINATA_API_KEY")
@@ -79,7 +79,7 @@ def get_result(statements):
 def index():
     print("here")
 
-    image_url = f"https://picsum.photos/id/237/200/20"
+    image_url = f"https://res.cloudinary.com/drlni3r6u/image/upload/v1711225941/warpcast-friends/ruyp2oj5xew4fg4dqynv.jpg"
     print(image_url)
     post_url = f"{app_url}/action"
     return render_template("firstTemplate.html", image_url=image_url, post_url=post_url)
@@ -125,4 +125,4 @@ def action():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
